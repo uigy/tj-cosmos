@@ -1,0 +1,44 @@
+.links {
+  position: relative;
+  width: 160px;
+  height: 448px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @include media(sm) {
+    width: 350px;
+    height: 448px;
+  }
+
+  @include media(md) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media(lg) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media(xl) {
+    width: 350px;
+    height: 448px;
+    margin-bottom: 0;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+}
+
+.dimmed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.2;
+  z-index: 5;
+}

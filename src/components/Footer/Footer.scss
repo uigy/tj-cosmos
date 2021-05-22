@@ -1,0 +1,24 @@
+.footer {
+  position: static;
+  display: flex;
+  width: 100%;
+  height: 64px;
+  bottom: 0;
+  padding: 16px 0;
+  @include footer-font;
+
+  @include media(xl) {
+    position: absolute;
+  }
+
+  .container {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include media(md) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}

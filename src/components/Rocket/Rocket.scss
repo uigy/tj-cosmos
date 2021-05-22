@@ -1,0 +1,90 @@
+.rocket {
+  position: relative;
+  position: static;
+  width: 375px;
+  height: 516px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media(xl) {
+    height: 100%;
+  }
+
+  .ilustration {
+    position: absolute;
+    width: 375px;
+    height: 444px;
+    bottom: 72px;
+
+    .ilustration-rocket {
+      position: absolute;
+      background: url(rocket.png);
+      width: 102px;
+      height: 140px;
+      top: 0;
+      left: 135px;
+      z-index: 4;
+
+      &--animate {
+        animation: fly 4s 1s linear, shake 1.5s linear;
+      }
+    }
+    .ilustration-landing-gear {
+      position: absolute;
+      background: url(landing-gear.png);
+      width: 68px;
+      height: 23px;
+      top: 122px;
+      left: 152px;
+      z-index: 3;
+
+      &--animate {
+        animation: shake 1s linear;
+      }
+    }
+    .ilustration-smoke-left {
+      position: absolute;
+      background: url(smoke-left.png);
+      width: 65px;
+      height: 62px;
+      top: 82px;
+      left: 87px;
+      opacity: 0;
+      z-index: 2;
+      transform-origin: center right;
+
+      &--animate {
+        animation: smoke 2.5s linear forwards;
+      }
+    }
+    .ilustration-smoke-right {
+      position: absolute;
+      background: url(smoke-right.png);
+      width: 52px;
+      height: 50px;
+      top: 95px;
+      left: 220px;
+      opacity: 0;
+      z-index: 2;
+      transform-origin: center left;
+
+      &--animate {
+        animation: smoke 2.5s linear forwards;
+      }
+    }
+    .ilustration-planet {
+      position: absolute;
+      background: url(planet.png);
+      width: 375px;
+      height: 372px;
+      top: 16.22%;
+      z-index: 1;
+    }
+  }
+
+  .rocket-button {
+    position: absolute;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+  width: 304px;
+
+  @include media(sm) {
+    width: 547.2px;
+  }
+
+  @include media(md) {
+    width: 729.6px;
+  }
+
+  @include media(lg) {
+    width: 942.4px;
+  }
+
+  @include media(xl) {
+    width: 1140px;
+  }
+}

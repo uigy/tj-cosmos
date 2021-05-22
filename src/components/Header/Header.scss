@@ -1,0 +1,26 @@
+.header {
+  position: static;
+  display: flex;
+  width: 100%;
+  top: 0;
+  height: 96px;
+  padding: 16px;
+
+  @include media(xl) {
+    position: absolute;
+  }
+
+  .container {
+    justify-content: center;
+
+    @include media(md) {
+      justify-content: flex-start;
+    }
+  }
+
+  .header-logo {
+    background: url("logo.svg");
+    height: 24px;
+    width: 116px;
+  }
+}

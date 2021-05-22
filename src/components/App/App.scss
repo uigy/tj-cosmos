@@ -1,0 +1,31 @@
+body {
+  background: $body-bg;
+  color: $body-color;
+  font-family: $font-family;
+}
+
+#content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.spacex {
+  .spacex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include media(xl) {
+      flex-direction: row;
+      padding-left: 110px;
+      padding-right: 85px;
+      justify-content: space-between;
+      align-items: initial;
+    }
+  }
+}
