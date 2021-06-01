@@ -1,6 +1,9 @@
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
@@ -22,7 +25,7 @@ module.exports = merge(common, {
             loader: "file-loader",
             options: {
               name: "[name].[contenthash].[ext]",
-              outputPath: "./img",
+              outputPath: "./images",
             },
           },
           {
@@ -40,18 +43,19 @@ module.exports = merge(common, {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "",
-            },
           },
           "css-loader",
           {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [["autoprefixer"]],
+                plugins: ["autoprefixer"],
               },
             },
+          },
+          {
+            loader: "resolve-url-loader",
+            options: { root: path.resolve(__dirname, "./src/assets/images/") },
           },
           "sass-loader",
           {
@@ -79,5 +83,9 @@ module.exports = merge(common, {
         },
       },
     ],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
 });

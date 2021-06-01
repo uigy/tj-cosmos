@@ -19,7 +19,7 @@
 
     .ilustration-rocket {
       position: absolute;
-      background: url(rocket.png);
+      background: url("/rocket.png");
       width: 102px;
       height: 140px;
       top: 0;
@@ -32,7 +32,7 @@
     }
     .ilustration-landing-gear {
       position: absolute;
-      background: url(landing-gear.png);
+      background: url("/landing-gear.png");
       width: 68px;
       height: 23px;
       top: 122px;
@@ -45,7 +45,7 @@
     }
     .ilustration-smoke-left {
       position: absolute;
-      background: url(smoke-left.png);
+      background: url("/smoke-left.png");
       width: 65px;
       height: 62px;
       top: 82px;
@@ -60,7 +60,7 @@
     }
     .ilustration-smoke-right {
       position: absolute;
-      background: url(smoke-right.png);
+      background: url("/smoke-right.png");
       width: 52px;
       height: 50px;
       top: 95px;
@@ -75,7 +75,7 @@
     }
     .ilustration-planet {
       position: absolute;
-      background: url(planet.png);
+      background: url("/planet.png");
       width: 375px;
       height: 372px;
       top: 16.22%;

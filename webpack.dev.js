@@ -31,14 +31,20 @@ module.exports = merge(common, {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [["autoprefixer"]],
+                plugins: ["autoprefixer"],
               },
             },
+          },
+          {
+            loader: "resolve-url-loader",
+            options: { root: path.resolve(__dirname, "./src/assets/images/") },
           },
           "sass-loader",
           {
             loader: "sass-resources-loader",
             options: {
+              sourceMap: true,
+              sourceMapContents: false,
               resources: [
                 "./src/assets/scss/variables.scss",
                 "./src/assets/scss/mixins.scss",

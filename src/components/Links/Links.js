@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Links.scss";
 import Tile from "./Tile";
-import { links } from "../../../public/data";
+import { links } from "../../assets/js/data";
 import Modal from "./Modal";
 
 const Links = () => {
